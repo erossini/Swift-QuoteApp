@@ -10,11 +10,16 @@ import UIKit
 class QuoteTableViewController: UITableViewController {
 
     var quotes = [
-        "First quote",
-        "Second quote",
-        "Third quote",
-        "Fourh quote",
-        "Fifth quote"
+        "Quote 1",
+        "Quote 2",
+        "Quote 3",
+        "Quote 4",
+        "Quote 5",
+        "Quote 6",
+        "Quote 7",
+        "Quote 8",
+        "Quote 9",
+        "Quote 10",
     ]
     
     override func viewDidLoad() {
@@ -36,7 +41,7 @@ class QuoteTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return quotes.count
+        return 10
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -45,12 +50,12 @@ class QuoteTableViewController: UITableViewController {
         
         return cell
     }
-
+    
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let selectedQuote = quotes[indexPath.row]
         performSegue(withIdentifier: "moveToQuoteDetail", sender: selectedQuote)
     }
-    
+
     /*
     // Override to support conditional editing of the table view.
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
