@@ -48,8 +48,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A1l-i4-6r6">
-                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A1l-i4-6r6">
+                                <rect key="frame" x="10" y="98" width="394" height="754"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -58,15 +58,13 @@
                         <viewLayoutGuide key="safeArea" id="pqA-sQ-boA"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="A1l-i4-6r6" firstAttribute="top" secondItem="pqA-sQ-boA" secondAttribute="top" id="8Av-p0-gip"/>
-                            <constraint firstItem="pqA-sQ-boA" firstAttribute="trailing" secondItem="A1l-i4-6r6" secondAttribute="trailing" id="KiV-z4-ePQ"/>
-                            <constraint firstItem="A1l-i4-6r6" firstAttribute="leading" secondItem="pqA-sQ-boA" secondAttribute="leading" id="L7O-MY-AjG"/>
-                            <constraint firstItem="pqA-sQ-boA" firstAttribute="bottom" secondItem="A1l-i4-6r6" secondAttribute="bottom" id="V3i-dY-G6D"/>
+                            <constraint firstItem="pqA-sQ-boA" firstAttribute="bottom" secondItem="A1l-i4-6r6" secondAttribute="bottom" constant="10" id="SeL-tL-jN6"/>
+                            <constraint firstItem="A1l-i4-6r6" firstAttribute="top" secondItem="pqA-sQ-boA" secondAttribute="top" constant="10" id="TN9-ih-Pm6"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="AZ7-iv-XqL"/>
                     <connections>
-                        <outlet property="quoteLabel" destination="A1l-i4-6r6" id="ecJ-a1-bkh"/>
+                        <outlet property="quoteLabel" destination="A1l-i4-6r6" id="vHl-dw-XuJ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="M5t-md-rbK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

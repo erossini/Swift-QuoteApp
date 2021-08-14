@@ -10,6 +10,13 @@ import UIKit
 class QuoteTableViewController: UITableViewController {
 
     var quotes = [
+        "The greatest glory in living lies not in never falling, but in rising every time we fall.\n\n- Nelson Mandela",
+        "The way to get started is to quit talking and begin doing.\n\n- Walt Disney",
+        "Your time is limited, so don't waste it living someone else's life. Don't be trapped by dogma – which is living with the results of other people's thinking.\n\n- Steve Jobs",
+        "If life were predictable it would cease to be life, and be without flavor.\n\n- Eleanor Roosevelt",
+        "If you look at what you have in life, you'll always have more. If you look at what you don't have in life, you'll never have enough.\n\n- Oprah Winfrey",
+        "If you set your goals ridiculously high and it's a failure, you will fail above everyone else's success.\n\n- James Cameron",
+        "Life is what happens when you're busy making other plans.\n\n- John Lennon",
         "Quote 1",
         "Quote 2",
         "Quote 3",
@@ -41,7 +48,7 @@ class QuoteTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 10
+        return quotes.count
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -55,7 +62,18 @@ class QuoteTableViewController: UITableViewController {
         let selectedQuote = quotes[indexPath.row]
         performSegue(withIdentifier: "moveToQuoteDetail", sender: selectedQuote)
     }
-
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // Get the new view controller using segue.destination.
+        // Pass the selected object to the new view controller.
+        if let quoteViewController = segue.destination as? QuoteDetailViewController {
+            if let selectedQuote = sender as? String {
+                quoteViewController.title = selectedQuote
+                quoteViewController.quote = selectedQuote
+            }
+        }
+    }
+    
     /*
     // Override to support conditional editing of the table view.
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
