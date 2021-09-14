@@ -1,4 +1,5 @@
 # Swift QuoteApp
+Display a list of quote with details. Only embedded data.
 
 ## Screenshot
 ![Simulator Screen Shot - iPhone 11 - 2021-09-11 at 18 40 38](https://user-images.githubusercontent.com/9497415/132956518-c3e695e8-fe24-47c1-8d38-706744a600af.png)
